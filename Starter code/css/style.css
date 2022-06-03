@@ -1,14 +1,39 @@
 body {
-    background-color: rgb(255, 232, 235);
+  background-color: rgb(255, 232, 235);
 }
 
 .heading {
-    background-color: rgb(228, 158, 170);
-    border-radius: 50%;
-    padding: 5px;
-    margin: 0 auto;
-    text-align: center;
-    width: 25%;
+  background-color: rgb(228, 158, 170);
+  border-radius: 50%;
+  padding: 5px;
+  margin: 0 auto;
+  text-align: center;
+  width: 25%;
 }
 
-.row {}
+.row {
+  display: flex;
+  padding: 0 4;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.item {
+  flex-basis: 25%;
+  max-width: 25%;
+  padding: 0 4px;
+  margin-top: 8px;
+}
+
+@media only screen and (max-width: 800px) {
+  .item {
+    max-width: 40%;
+    flex-basis: 40%;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .item {
+    max-width: 100%;
+    flex-basis: 100%;
+  }
+}
